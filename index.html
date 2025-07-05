@@ -2,183 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZegTech Sibundoy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2d9a1e07b.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-    }
-
     body {
-      background-color: #f8f9fa;
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f4f4;
       color: #333;
     }
-
     header {
-      background-color: #000;
+      background: #000;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #222;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      justify-content: center;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      margin-right: 1rem;
-    }
-
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
     }
-
     nav ul li {
-      position: relative;
+      margin: 0;
     }
-
-    nav ul li:hover ul {
+    nav ul li a {
       display: block;
-    }
-
-    nav ul ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      background: white;
-      color: black;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-    }
-
-    nav ul ul li {
-      padding: 0.5rem;
-    }
-
-    .main {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .card img, .card video {
-      width: 100%;
-      display: block;
-    }
-
-    .card .desc {
       padding: 1rem;
-    }
-
-    footer {
-      background: #000;
       color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
-    }
-
-    .floating-buttons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .floating-buttons a {
-      background: #25D366;
-      color: white;
-      padding: 0.75rem 1rem;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       text-decoration: none;
     }
-
-    .facebook-btn {
-      background: #4267B2;
+    nav ul li a:hover {
+      background: #444;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="ZegTech Logo">
-      <h1>ZegTech Sibundoy</h1>
-    </div>
-    <nav>
-      <ul>
-        <li>Soluciones Informáticas
-          <ul>
-            <li>Asesoría en Ofimática</li>
-            <li>Servicio remoto</li>
-            <li>Mantenimiento de equipos</li>
-          </ul>
-        </li>
-        <li>Reparaciones
-          <ul>
-            <li>Celulares</li>
-            <li>Computadores</li>
-          </ul>
-        </li>
-        <li>Cámaras de Seguridad
-          <ul>
-            <li>Venta</li>
-            <li>Instalación</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <h1>ZegTech Sibundoy</h1>
+    <p>Soluciones Informáticas, Reparaciones y Cámaras de Seguridad</p>
   </header>
-
-  <main class="main">
-    <h2>Trabajos Realizados</h2>
-    <div class="gallery">
-      <div class="card">
-        <img src="reparacion-portatil.jpg" alt="Reparación de portátil">
-        <div class="desc">
-          Cambio de teclado y revisión general de portátil Acer.
-        </div>
-      </div>
-    </div>
+  <nav>
+    <ul>
+      <li><a href="soluciones.html">Soluciones Informáticas</a></li>
+      <li><a href="reparaciones.html">Reparaciones</a></li>
+      <li><a href="camaras.html">Cámaras de Seguridad</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Bienvenido a ZegTech Sibundoy</h2>
+    <p>Ofrecemos servicios tecnológicos profesionales, instalación de cámaras, reparación de equipos y asesorías.</p>
+    <img src="reparacion-portatil.jpg" alt="Ejemplo de trabajo">
   </main>
-
-  <div class="floating-buttons">
-    <a href="https://wa.me/573222922283" target="_blank" title="Contáctanos por WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.facebook.com/share/16faiqqR15/" target="_blank" class="facebook-btn" title="Visítanos en Facebook"><i class="fab fa-facebook-f"></i></a>
-  </div>
-
   <footer>
-    <p>&copy; 2025 ZegTech Sibundoy. Todos los derechos reservados.</p>
+    <p>Contacto por WhatsApp: <a href="https://wa.me/573222922283">322 292 2283</a> | <a href="https://www.facebook.com/share/16faiqqR15/">Facebook</a></p>
   </footer>
 </body>
 </html>
